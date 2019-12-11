@@ -1,0 +1,39 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+
+  <title>Comment API Readme</title>
+  <meta name="description" content="Comment API Readme">
+  <meta name="author" content="Alex Van Patten">
+</head>
+
+<body>
+<h1>Comment API Readme</h1>
+<p>This is an api that can be used to store comments and how many likes they have.</p>
+<p>The following apis are available:</p>
+
+<h2> GET /comment</h2>
+<p>Will return an array with all stored comments.</p>
+<p>{"comments": [{"comment": "comment_1", "likes": 42, "comment_id": 0}, {"comment": "comment_2", "likes": 2, "comment_id": 1}, ...}</p>
+
+<h2> POST /comment</h2>
+<p>Takes a json that contains only the comment being posted: </p>
+<p>{"comment": "This is a comment"}</p>
+<p>And returns the response: </p>
+<p>{"response": "Comment Created", "comment_dict": {"comment": "This is a comment", "likes": 0, "comment_id": 14}}</p>
+
+<h2> GET /comment/[comment_id]</h2>
+<p>Will return the comment associated with comment_id: </p>
+<p>{"comment": "This is a comment", "likes": 0, "comment_id": 14}</p>
+
+<h2> DELETE /comment/[comment_id]</h2>
+<p>Will delete the comment associated with comment_id and return 204.</p>
+
+<h2> POST /comment/[comment_id]/like</h2>
+<p> Will add a like to the comment and return 204.</p>
+
+<h2> POST /comment/[comment_id]/unlike</h2>
+<p> Will remove a like from the comment with return code 204. If there are no comments left to remove, will return 403 instead.</p>
+</body>
