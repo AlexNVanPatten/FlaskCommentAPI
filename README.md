@@ -19,8 +19,10 @@ Then, run
 ```
 docker-compose up
 ```
-From there docker should set everything up. For instructions 
-on how to use the api, once the container is up you can navigate to
+From there docker should set up two containers, the web container accessible on port 5000, 
+and the nginx container that will forward port 80 to web container port 5000.  
+
+For instructions on how to use the api, once the container is up you can navigate to:
 ```
 127.0.0.1:80/readme
 ```
