@@ -13,11 +13,11 @@ git clone https://github.com/AlexNVanPatten/FlaskCommentAPI.git
 ```
 Then navigate to the top level folder of this repo and run:
 ```
-docker compose build
+docker-compose build
 ```
 Then, run
 ```
-docker compose up
+docker-compose up
 ```
 From there docker should set everything up. For instructions 
 on how to use the api, once the container is up you can navigate to
